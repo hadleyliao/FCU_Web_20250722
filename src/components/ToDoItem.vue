@@ -35,6 +35,7 @@ export default {
   methods: {
     onCheck(event) {
       this.isDone = event.target.checked;
+      this.$emit('change', { id: this.id, done: this.isDone });
     }
   }
 };

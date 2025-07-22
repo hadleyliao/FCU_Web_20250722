@@ -4,7 +4,7 @@
     <input
       id="todo-input"
       type="text"
-      v-model.lazy.trim="label"
+      v-model.lazy.trim="inputValue"
       autocomplete="off"
     />
     <button type="submit">新增</button>
@@ -13,14 +13,13 @@
 
 <script setup>
 import { ref } from 'vue'
-const label = ref('')
+const inputValue = ref('')
+const emit = defineEmits(['add'])
 
 function handleSubmit() {
-  if (label.value) {
-    emit('add', label.value)
-    label.value = ''
+  if (inputValue.value) {
+    emit('add', inputValue.value)
+    inputValue.value = ''
   }
 }
-
-const emit = defineEmits(['add'])
 </script>

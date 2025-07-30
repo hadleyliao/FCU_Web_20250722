@@ -1,3 +1,5 @@
+<!--使用者從這裡修改編輯資料時，透過「事件」把資料傳過去 → ToDoItem → 再傳到 App.vue -->
+
 <template>
   <form @submit.prevent="onSave">
     <input type="text" v-model.trim="editValue" />

@@ -1,3 +1,5 @@
+<!--使用者從這裡輸入資料，透過「事件」把資料傳過去App.vue-->
+
 <template>
   <form @submit.prevent="handleSubmit">
     <label for="todo-input">請輸入代辦事項：</label>

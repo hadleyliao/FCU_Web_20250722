@@ -10,8 +10,8 @@
       :disabled="isEditing"
     />
     <label :for="id" v-if="!isEditing">{{ label }}</label>
-    <button v-if="!isEditing" @click="onEdit">編輯</button>
-    <button v-if="!isEditing" @click="onDelete">刪除</button>
+    <button v-if="!isEditing" @click="onEdit" class="edit-btn">編輯</button>
+    <button v-if="!isEditing" @click="onDelete" class="delete-btn">刪除</button>
     <ToDoItemEditForm
       v-if="isEditing"
       :modelValue="label"
@@ -72,3 +72,34 @@ export default {
   }
 };
 </script>
+
+<style scoped>
+.edit-btn {
+  background: #fff;
+  color: #222;
+  border: 1px solid #222;
+  border-radius: 4px;
+  padding: 2px 10px;
+  margin-left: 8px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.edit-btn:hover {
+  background: #222;
+  color: #fff;
+}
+.delete-btn {
+  background: #e53935;
+  color: #fff;
+  border: 1px solid #e53935;
+  border-radius: 4px;
+  padding: 2px 10px;
+  margin-left: 8px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.delete-btn:hover {
+  background: #b71c1c;
+  border-color: #b71c1c;
+}
+</style>

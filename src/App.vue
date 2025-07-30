@@ -44,7 +44,7 @@ const totalCount = computed(() => ToDoItems.value.length)
   <div>
     <h2>代辦清單</h2>
     <ToDoForm @add="addTodo" />
-    <div style="margin: 20px 0 20px 0; font-size: 20px; color: lightpink;">
+    <div style="margin: 20px 0 20px 0; font-size: 20px; color: deepskyblue;">
       *´¨`*•.¸¸.•*´¨`*•.¸¸.•*´¨`* 完成紀錄 {{ completedCount }} / {{ totalCount }}   *´¨`*•.¸¸.•*´¨`*•.¸¸.•*´¨`*
     </div>
     <div
